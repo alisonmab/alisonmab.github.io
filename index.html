@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAB Manutenção</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -16,14 +17,20 @@
         </nav>
     </header>
 
+    <!-- Página Inicial -->
+    <section class="homepage">
+        <h1>MAB MANUTENÇÃO - SEUS EQUIPAMENTOS EM BOAS MÃOS</h1>
+        <p>Na MAB Manutenção, contamos com uma equipe altamente qualificada composta por técnicos em mecânica e eletrônica, além de um engenheiro mecatrônico. Nosso compromisso é garantir que seus equipamentos tenham máxima eficiência e durabilidade. Aqui, você pode confiar!</p>
+        <p>A manutenção preventiva e corretiva de máquinas e motores é essencial para garantir seu funcionamento adequado, evitar falhas inesperadas e prolongar sua vida útil. Investir em manutenção é economizar tempo e dinheiro, prevenindo problemas antes que se tornem irreparáveis.</p>
+    </section>
+
     <!-- Conteúdo Principal -->
     <div class="main-container">
-        <!-- Área de Conteúdo -->
         <div class="content">
             <!-- Aba Serviços -->
-            <div id="tab1" class="tab-content">
+            <div id="tab1" class="tab-content active">
                 <h2>Nossos Serviços</h2>
-                <p>Manutenção de equipamentos e ferramentas para jardinagem e construção.</p>
+                <p>Manutenção especializada em equipamentos e ferramentas para jardinagem e construção.</p>
                 <ul>
                     <li>Manutenção de Roçadeiras</li>
                     <li>Manutenção de Motosserras</li>
@@ -32,13 +39,14 @@
             </div>
 
             <!-- Aba Sobre -->
-            <div id="tab2" class="tab-content" style="display:none;">
+            <div id="tab2" class="tab-content">
                 <h2>Sobre a MAB Manutenção</h2>
-                <p>Somos especialistas em manutenção de roçadeiras, motosserras e outros equipamentos. Com anos de experiência, garantimos qualidade e confiança em todos os nossos serviços.</p>
+                <p>A MAB Manutenção nasceu da união entre um pai e um filho, compartilhando uma paixão pelo funcionamento e desempenho de máquinas. O pai, com experiência e dedicação à jardinagem e mecânica, sempre valorizou a importância de equipamentos bem cuidados. O filho, fascinado por motores, robótica e tecnologia, trouxe inovação e conhecimento técnico para aprimorar os serviços.</p>
+                <p>Combinamos tradição e inovação para oferecer um serviço de alta qualidade, garantindo que cada equipamento receba o melhor cuidado. Nossa missão é proporcionar confiança e segurança aos nossos clientes, assegurando que suas máquinas estejam sempre prontas para o trabalho.</p>
             </div>
 
             <!-- Aba Contato -->
-            <div id="tab3" class="tab-content" style="display:none;">
+            <div id="tab3" class="tab-content">
                 <h2>Entre em Contato</h2>
                 <form action="#" method="POST">
                     <input type="text" name="nome" placeholder="Seu Nome" required>
@@ -48,20 +56,18 @@
                 </form>
             </div>
         </div>
-
-        <!-- Painel Lateral -->
-        <div class="side-panel">
-            <button class="tab-button" onclick="openTab('tab1')">Serviços</button>
-            <button class="tab-button" onclick="openTab('tab2')">Sobre</button>
-            <button class="tab-button" onclick="openTab('tab3')">Contato</button>
-        </div>
     </div>
+
+    <!-- Painel Lateral -->
+    <aside class="side-panel">
+        <button class="tab-button" onclick="openTab('tab1')">Serviços</button>
+        <button class="tab-button" onclick="openTab('tab2')">Sobre</button>
+        <button class="tab-button" onclick="openTab('tab3')">Contato</button>
+    </aside>
 
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 MAB Manutenção | Todos os direitos reservados</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
