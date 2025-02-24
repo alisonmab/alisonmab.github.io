@@ -3,73 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAB Manutenção</title>
+    <title>MAB Manutenção - Contato</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Header -->
     <header>
-        <nav class="navbar">
+        <nav>
             <div class="logo">
                 <a href="#">MAB Manutenção</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Página Inicial</a></li>
-                <li><a href="#servicos">Nossos Serviços</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Serviços de Manutenção de Máquinas e Ferramentas</h1>
-            <p>Profissionais qualificados para garantir a qualidade do seu equipamento.</p>
-            <a href="#servicos" class="btn-primary">Saiba Mais</a>
+    <!-- Conteúdo Principal -->
+    <div class="main-container">
+        <!-- Painel de Abas Lateral -->
+        <div class="side-panel">
+            <button class="tab-button" onclick="openTab('tab1')">Contato</button>
+            <button class="tab-button" onclick="openTab('tab2')">Serviços</button>
+            <button class="tab-button" onclick="openTab('tab3')">Sobre</button>
         </div>
-    </section>
 
-    <!-- Serviços Section -->
-    <section id="servicos" class="servicos">
-        <h2>Nosso Serviços</h2>
-        <div class="servico-item">
-            <img src="images/roçadeira.jpg" alt="Roçadeira">
-            <h3>Manutenção de Roçadeiras</h3>
-            <p>Serviço especializado em manutenção e reparo de roçadeiras para diversas aplicações.</p>
+        <!-- Área de Conteúdo -->
+        <div class="content">
+            <!-- Aba Contato -->
+            <div id="tab1" class="tab-content">
+                <h2>Entre em Contato</h2>
+                <form action="#" method="POST">
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Aba Serviços -->
+            <div id="tab2" class="tab-content" style="display:none;">
+                <h2>Nossos Serviços</h2>
+                <p>Manutenção de equipamentos e ferramentas para jardinagem e construção.</p>
+            </div>
+
+            <!-- Aba Sobre -->
+            <div id="tab3" class="tab-content" style="display:none;">
+                <h2>Sobre a MAB Manutenção</h2>
+                <p>Somos especialistas em manutenção de roçadeiras, motosserras e outros equipamentos.</p>
+            </div>
         </div>
-        <div class="servico-item">
-            <img src="images/soprador.jpg" alt="Soprador">
-            <h3>Manutenção de Sopradores</h3>
-            <p>Garantimos o máximo desempenho para seus sopradores com serviços rápidos e eficientes.</p>
-        </div>
-        <div class="servico-item">
-            <img src="images/motosserra.jpg" alt="Motosserra">
-            <h3>Manutenção de Motosserras</h3>
-            <p>Manutenção completa para motosserras, garantindo segurança e durabilidade.</p>
-        </div>
-    </section>
+    </div>
 
-    <!-- Sobre Section -->
-    <section id="sobre" class="sobre">
-        <h2>Sobre a MAB Manutenção</h2>
-        <p>Somos uma empresa especializada em manutenção de equipamentos para jardinagem e construção. Com anos de experiência, oferecemos serviços de alta qualidade com o melhor atendimento.</p>
-    </section>
-
-    <!-- Contato Section -->
-    <section id="contato" class="contato">
-        <h2>Contato</h2>
-        <form action="#" method="POST">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-            <button type="submit" class="btn-primary">Enviar</button>
-        </form>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 MAB Manutenção | Todos os direitos reservados</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
