@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAB Manutenção - Contato</title>
+    <title>MAB Manutenção</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Cabeçalho -->
     <header>
         <nav>
             <div class="logo">
@@ -18,17 +18,34 @@
 
     <!-- Conteúdo Principal -->
     <div class="main-container">
-        <!-- Painel de Abas Lateral -->
+        <!-- Painel Lateral -->
         <div class="side-panel">
-            <button class="tab-button" onclick="openTab('tab1')">Contato</button>
-            <button class="tab-button" onclick="openTab('tab2')">Serviços</button>
-            <button class="tab-button" onclick="openTab('tab3')">Sobre</button>
+            <button class="tab-button" onclick="openTab('tab1')">Serviços</button>
+            <button class="tab-button" onclick="openTab('tab2')">Sobre</button>
+            <button class="tab-button" onclick="openTab('tab3')">Contato</button>
         </div>
 
         <!-- Área de Conteúdo -->
         <div class="content">
-            <!-- Aba Contato -->
+            <!-- Aba Serviços -->
             <div id="tab1" class="tab-content">
+                <h2>Nossos Serviços</h2>
+                <p>Manutenção de equipamentos e ferramentas para jardinagem e construção.</p>
+                <ul>
+                    <li>Manutenção de Roçadeiras</li>
+                    <li>Manutenção de Motosserras</li>
+                    <li>Manutenção de Sopradores</li>
+                </ul>
+            </div>
+
+            <!-- Aba Sobre -->
+            <div id="tab2" class="tab-content" style="display:none;">
+                <h2>Sobre a MAB Manutenção</h2>
+                <p>Somos especialistas em manutenção de roçadeiras, motosserras e outros equipamentos. Com anos de experiência, garantimos qualidade e confiança em todos os nossos serviços.</p>
+            </div>
+
+            <!-- Aba Contato -->
+            <div id="tab3" class="tab-content" style="display:none;">
                 <h2>Entre em Contato</h2>
                 <form action="#" method="POST">
                     <input type="text" name="nome" placeholder="Seu Nome" required>
@@ -37,22 +54,10 @@
                     <button type="submit">Enviar</button>
                 </form>
             </div>
-
-            <!-- Aba Serviços -->
-            <div id="tab2" class="tab-content" style="display:none;">
-                <h2>Nossos Serviços</h2>
-                <p>Manutenção de equipamentos e ferramentas para jardinagem e construção.</p>
-            </div>
-
-            <!-- Aba Sobre -->
-            <div id="tab3" class="tab-content" style="display:none;">
-                <h2>Sobre a MAB Manutenção</h2>
-                <p>Somos especialistas em manutenção de roçadeiras, motosserras e outros equipamentos.</p>
-            </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 MAB Manutenção | Todos os direitos reservados</p>
     </footer>
