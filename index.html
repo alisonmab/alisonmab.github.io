@@ -1,86 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAB Manutenção</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <!-- Cabeçalho -->
-    <header>
-        <nav>
-            <div class="logo">
-                <!-- Inclua o logo da sua empresa -->
-                <a href="#"><img src="logo.png" alt="MAB Manutenção Logo"></a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Página Inicial -->
-    <section class="homepage">
-        <h1>MAB MANUTENÇÃO - SEUS EQUIPAMENTOS EM BOAS MÃOS</h1>
-        <p>Na MAB Manutenção, somos especialistas na manutenção de motores de popa e equipamentos de 2 e 4 tempos. Nossa equipe, formada por engenheiros e técnicos altamente qualificados, está pronta para garantir que seu equipamento esteja sempre funcionando com máxima eficiência e durabilidade.</p>
-        <p>Imagine sair para uma pescaria, ansioso para se divertir, e chegando lá o motor de popa não funciona? O que era para ser um momento de lazer se torna uma frustração. Não deixe isso acontecer! Conte com os especialistas da MAB Manutenção. Deixe que quem entende do assunto cuide do seu motor, garantindo sua diversão sem surpresas.</p>
-    </section>
-
-    <!-- Conteúdo Principal -->
-    <div class="main-container">
-        <div class="content">
-            <!-- Aba Serviços -->
-            <div id="tab1" class="tab-content active">
-                <h2>Nossos Serviços</h2>
-                <p>Manutenção especializada em motores de popa e equipamentos 2 e 4 tempos. Aqui estão os nossos principais serviços:</p>
-                <ul>
-                    <li>Manutenção de Motores de Popa</li>
-                    <li>Manutenção de Roçadeiras</li>
-                    <li>Manutenção de Motosserras</li>
-                    <li>Manutenção de Sopradores</li>
-                </ul>
-            </div>
-
-            <!-- Aba Sobre -->
-            <div id="tab2" class="tab-content">
-                <h2>Sobre a MAB Manutenção</h2>
-                <p>A MAB Manutenção nasceu da união entre um pai e um filho, compartilhando uma paixão pelo funcionamento e desempenho de máquinas. O pai, com experiência e dedicação à jardinagem e mecânica, sempre valorizou a importância de equipamentos bem cuidados. O filho, fascinado por motores, robótica e tecnologia, trouxe inovação e conhecimento técnico para aprimorar os serviços.</p>
-                <p>Combinamos tradição e inovação para oferecer um serviço de alta qualidade, garantindo que cada equipamento receba o melhor cuidado. Nossa missão é proporcionar confiança e segurança aos nossos clientes, assegurando que suas máquinas estejam sempre prontas para o trabalho.</p>
-            </div>
-
-            <!-- Aba Contato -->
-            <div id="tab3" class="tab-content">
-                <h2>Entre em Contato</h2>
-                <form action="#" method="POST">
-                    <input type="text" name="nome" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu E-mail" required>
-                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+<section class="homepage">
+    <h1>MAB MANUTENÇÃO - SEUS EQUIPAMENTOS EM BOAS MÃOS</h1>
+    
+    <div class="image-text">
+        <img src="images/motor_popa.jpg" alt="Motor de Popa">
+        <div class="text">
+            <p>Já pensou em chegar para sua pescaria e seu motor de popa não ligar?</p>
+            <p>Não deixe isso acontecer! Conte com os especialistas da MAB Manutenção.</p>
+        </div>
+    </div>
+    
+    <div class="image-text">
+        <img src="images/roçadeira.jpg" alt="Roçadeira">
+        <div class="text">
+            <p>Roçadeira parou de funcionar? Nós consertamos rápido para você voltar ao trabalho!</p>
         </div>
     </div>
 
-    <!-- Painel Lateral -->
-    <aside class="side-panel">
-        <button class="tab-button" onclick="openTab('tab1')">Serviços</button>
-        <button class="tab-button" onclick="openTab('tab2')">Sobre</button>
-        <button class="tab-button" onclick="openTab('tab3')">Contato</button>
-    </aside>
+    <div class="image-text">
+        <img src="images/motosserra.jpg" alt="Motosserra">
+        <div class="text">
+            <p>Sua motosserra não está cortando bem? Deixe com a gente e resolva o problema!</p>
+        </div>
+    </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 MAB Manutenção | Todos os direitos reservados</p>
-    </footer>
-
-    <script>
-        function openTab(tabId) {
-            // Esconde todas as abas
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Mostra a aba clicada
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
-</body>
-</html>
+    <div class="image-text">
+        <img src="images/soprador.jpg" alt="Soprador">
+        <div class="text">
+            <p>Soprador com baixa potência? Trouxemos a solução para você!</p>
+        </div>
+    </div>
+</section>
