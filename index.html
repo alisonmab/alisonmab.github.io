@@ -70,5 +70,16 @@
     <footer>
         <p>&copy; 2025 MAB Manutenção | Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        function openTab(tabId) {
+            // Esconde todas as abas
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Mostra a aba clicada
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
