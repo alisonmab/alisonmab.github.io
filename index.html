@@ -1,92 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAB Manutenção</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manutenção de roçadeiras, motores 2T/4T e motores de popa em Jarinú - SP">
+  <title>MAB Manutenções</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #facc15;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+    }
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #facc15;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600080088530-b1cfb87cd9a1?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h2 {
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px;
+      font-size: 2rem;
+      color: #fff;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      color: #facc15;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .section p {
+      margin-bottom: 15px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .service-card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px #000;
+    }
+    .service-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #1e1e1e;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <nav>
-            <div class="logo">
-                <!-- Inclua o logo da sua empresa -->
-                <a href="#"><img src="logo.png" alt="MAB Manutenção Logo"></a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <h1>MAB Manutenções</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <!-- Página Inicial -->
-    <section class="homepage">
-        <h1>MAB MANUTENÇÃO - SEUS EQUIPAMENTOS EM BOAS MÃOS</h1>
-        
-        <p>Já pensou em chegar para sua pescaria e seu motor de popa não ligar? Não deixe isso acontecer! Conte com os especialistas da MAB Manutenção.</p>
-        
-        <p>Roçadeira parou de funcionar? A MAB Manutenção resolve para você!</p>
-        
-        <p>Sua motosserra não está cortando bem? Deixe a gente resolver esse problema!</p>
-        
-        <p>Soprador com baixa potência? Trouxemos a solução para você!</p>
-    </section>
+  <section class="hero">
+    <h2>Seus equipamentos em boas mãos ⚙️🔧</h2>
+  </section>
 
-    <!-- Conteúdo Principal -->
-    <div class="main-container">
-        <div class="content">
-            <!-- Aba Serviços -->
-            <div id="tab1" class="tab-content active">
-                <h2>Nossos Serviços</h2>
-                <p>Manutenção especializada em motores de popa e equipamentos 2 e 4 tempos. Aqui estão os nossos principais serviços:</p>
-                <ul>
-                    <li>Manutenção de Motores de Popa</li>
-                    <li>Manutenção de Roçadeiras</li>
-                    <li>Manutenção de Motosserras</li>
-                    <li>Manutenção de Sopradores</li>
-                </ul>
-            </div>
+  <section class="section" id="sobre">
+    <h3>Quem Somos</h3>
+    <p>Somos especialistas em manutenção de motores 2T e 4T, atuando com roçadeiras, sopradores, motosserras e motores de popa. A MAB conta com uma equipe formada por engenheiros e técnicos prontos pra resolver o problema do seu equipamento.</p>
+  </section>
 
-            <!-- Aba Sobre -->
-            <div id="tab2" class="tab-content">
-                <h2>Sobre a MAB Manutenção</h2>
-                <p>A MAB Manutenção nasceu da união entre um pai e um filho, compartilhando uma paixão pelo funcionamento e desempenho de máquinas. O pai, com experiência e dedicação à jardinagem e mecânica, sempre valorizou a importância de equipamentos bem cuidados. O filho, fascinado por motores, robótica e tecnologia, trouxe inovação e conhecimento técnico para aprimorar os serviços.</p>
-                <p>Combinamos tradição e inovação para oferecer um serviço de alta qualidade, garantindo que cada equipamento receba o melhor cuidado. Nossa missão é proporcionar confiança e segurança aos nossos clientes, assegurando que suas máquinas estejam sempre prontas para o trabalho.</p>
-            </div>
-
-            <!-- Aba Contato -->
-            <div id="tab3" class="tab-content">
-                <h2>Entre em Contato</h2>
-                <form action="#" method="POST">
-                    <input type="text" name="nome" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu E-mail" required>
-                    <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
+  <section class="section" id="servicos">
+    <h3>Nossos Serviços</h3>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3079/3079044.png" alt="Roçadeira">
+        <h4>Manutenção de Roçadeiras</h4>
+        <p>Conserto e revisão completa com peças originais.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/6087/6087235.png" alt="Motor de Popa">
+        <h4>Manutenção de Motores de Popa</h4>
+        <p>Revisão geral, testes em bancada e troca de componentes.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1630/1630422.png" alt="Peças">
+        <h4>Venda de Peças</h4>
+        <p>Temos uma variedade de peças de reposição para diversas marcas.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Painel Lateral -->
-    <aside class="side-panel">
-        <button class="tab-button" onclick="openTab('tab1')">Serviços</button>
-        <button class="tab-button" onclick="openTab('tab2')">Sobre</button>
-        <button class="tab-button" onclick="openTab('tab3')">Contato</button>
-    </aside>
+  <section class="section" id="contato">
+    <h3>Fale com a Gente</h3>
+    <p>📞 (11) 96434-0212</p>
+    <p>📧 comercial@mabmanutencao.com.br</p>
+    <p>📍 Rua Verona, 27 – Vila Nova Trieste, Jarinú – SP</p>
+    <p><a href="https://api.whatsapp.com/send?phone=5511964340212" style="color: #facc15; font-weight: bold; text-decoration: none;">Chamar no WhatsApp</a></p>
+  </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 MAB Manutenção | Todos os direitos reservados</p>
-    </footer>
-
-    <script>
-        function openTab(tabId) {
-            // Esconde todas as abas
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Mostra a aba clicada
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
+  <footer>
+    <p>&copy; 2025 MAB Manutenções - Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
