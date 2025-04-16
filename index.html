@@ -1,135 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAB Manutenções</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #2e2e2e;
-      color: #ffffff;
+      color: #f0f0f0;
     }
     header {
-      background-color: #1f1f1f;
-      padding: 20px;
+      background-color: #1e1e1e;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 20px;
     }
     header img {
-      height: 50px;
+      height: 60px;
     }
     nav a {
-      color: #4db8ff;
-      margin-left: 20px;
+      color: #00aaff;
       text-decoration: none;
-      transition: 0.3s;
+      margin: 0 15px;
+      font-weight: bold;
     }
-    nav a:hover {
-      color: #ffffff;
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
     }
-    .hero {
-      background: url('https://via.placeholder.com/1500x500?text=Equipe+trabalhando') no-repeat center center;
-      background-size: cover;
-      height: 500px;
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: slide 10s infinite;
+    }
+    @keyframes slide {
+      0% {opacity: 1;}
+      33% {opacity: 0;}
+      66% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
-      font-size: 2.5rem;
-      text-shadow: 2px 2px 5px black;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #4db8ff;
-      margin-bottom: 20px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .service-box {
-      background-color: #3a3a3a;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-    .gallery img {
-      width: 200px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: #888;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+    }
+    .overlay h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #00aaff;
+    }
+    .overlay p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://via.placeholder.com/150x50?text=MAB+Logo" alt="MAB Manutenções">
+    <img src="/mnt/data/e7fc76ff-cf9f-4d86-b160-2df96828a693.png" alt="Logo MAB">
     <nav>
-      <a href="#sobre">Quem Somos</a>
+      <a href="#">Início</a>
       <a href="#servicos">Serviços</a>
-      <a href="#galeria">Galeria</a>
-      <a href="loja.html">Loja</a> <!-- Novo link adicionado -->
+      <a href="#sobre">Sobre Nós</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
-  <section class="hero">
-    Seus equipamentos em boas mãos
-  </section>
-
-  <section class="section" id="sobre">
-    <h2>Quem Somos</h2>
-    <p>A MAB Manutenções é uma empresa especializada na manutenção e venda de máquinas 2 e 4 tempos. Com uma equipe formada por engenheiros e técnicos experientes, garantimos um serviço de qualidade e confiança.</p>
-  </section>
-
-  <section class="section" id="servicos">
-    <h2>Serviços</h2>
-    <div class="services">
-      <div class="service-box">Manutenção de Roçadeiras</div>
-      <div class="service-box">Conserto de Sopradores</div>
-      <div class="service-box">Revisão de Motosserras</div>
-      <div class="service-box">Motores de Popa</div>
+  <section class="banner">
+    <img src="https://cdn.pixabay.com/photo/2016/03/27/19/47/mechanic-1280557_1280.jpg" alt="Imagem Oficina">
+    <div class="overlay">
+      <h1>Seus equipamentos em boas mãos</h1>
+      <p>Não perca serviço por causa das suas ferramentas. Conte com a MAB para deixá-las sempre em dia!</p>
     </div>
   </section>
 
-  <section class="section" id="galeria">
-    <h2>Galeria</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/200x150?text=Roçadeira" alt="Roçadeira">
-      <img src="https://via.placeholder.com/200x150?text=Soprador" alt="Soprador">
-      <img src="https://via.placeholder.com/200x150?text=Motosserra" alt="Motosserra">
-      <img src="https://via.placeholder.com/200x150?text=Equipe+trabalhando" alt="Trabalho">
-    </div>
-  </section>
-
-  <footer id="contato">
-    <p>Rua Verona, 27 – Lote 2372, Vila Nova Trieste, Jarinu – SP</p>
-    <p>contato: comercial@mabmanutencao.com.br | (11) 96434-0212</p>
-    <p>&copy; 2025 MAB Manutenções</p>
-  </footer>
+  <a class="whatsapp" href="https://wa.me/5511964340212" target="_blank">💬</a>
 </body>
 </html>
