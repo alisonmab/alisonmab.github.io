@@ -1,108 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MAB Manutenções</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #2e2e2e;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #1e1e1e;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-    header img {
-      height: 60px;
-    }
-    nav a {
-      color: #00aaff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .banner {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-    }
-    .banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      animation: slide 10s infinite;
-    }
-    @keyframes slide {
-      0% {opacity: 1;}
-      33% {opacity: 0;}
-      66% {opacity: 1;}
-      100% {opacity: 0;}
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-    .overlay h1 {
-      font-size: 36px;
-      margin: 0;
-      color: #00aaff;
-    }
-    .overlay p {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 24px;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <img src="mab.png" alt="Logo MAB">
-    <nav>
-      <a href="#">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre Nós</a>
-      <a href="#contato">Contato</a>
-    </nav>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-blue-700">MAB Manutenções</h1>
+      <nav class="space-x-4 text-blue-800">
+        <a href="#inicio" class="hover:underline">Início</a>
+        <a href="#sobre" class="hover:underline">Sobre</a>
+        <a href="#servicos" class="hover:underline">Serviços</a>
+        <a href="#contato" class="hover:underline">Contato</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="banner">
-    <img src="https://cdn.pixabay.com/photo/2016/03/27/19/47/mechanic-1280557_1280.jpg" alt="Imagem Oficina">
-    <div class="overlay">
-      <h1>Seus equipamentos em boas mãos</h1>
-      <p>Não perca serviço por causa das suas ferramentas. Conte com a MAB para deixá-las sempre em dia!</p>
+  <!-- Início -->
+  <section id="inicio" class="bg-gray-900 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Seus equipamentos em boas mãos</h2>
+      <p class="text-xl">Manutenção especializada em roçadeiras, motosserras, sopradores e motores de popa</p>
     </div>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/5511964340212" target="_blank">💬</a>
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-8 text-green-800">Sobre a MAB Manutenções</h2>
+      <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700">
+        <p>
+          A MAB Manutenções nasceu da nossa própria necessidade. Começamos realizando manutenções nas nossas próprias máquinas, com o cuidado e a dedicação de quem entende a importância de manter os equipamentos em perfeito funcionamento.
+        </p>
+        <p class="mt-4">
+          Com o tempo, amigos e conhecidos começaram a nos procurar, confiando em nossa experiência e qualidade no serviço. Foi aí que percebemos o potencial de transformar essa paixão em um negócio de verdade.
+        </p>
+        <p class="mt-4">
+          No início de 2025, decidimos tirar o projeto do papel e fundamos oficialmente a MAB Manutenções. Hoje, nossa missão é garantir que cada equipamento que passe por aqui receba atenção técnica de alto nível, com transparência e compromisso.
+        </p>
+        <p class="mt-4">
+          Somos movidos pela confiança dos nossos clientes e pelo desejo de entregar sempre o melhor, seja na manutenção de roçadeiras, sopradores, motosserras ou motores de popa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-blue-800 mb-10">Nossos Serviços</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700">
+        <div class="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Manutenção de Roçadeiras</h3>
+          <p>Revisão completa, troca de peças, regulagem e limpeza geral.</p>
+        </div>
+        <div class="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Sopradores e Motosserras</h3>
+          <p>Serviço técnico especializado para manter alto desempenho e segurança.</p>
+        </div>
+        <div class="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Motores de Popa</h3>
+          <p>Troca de óleo, velas, inspeção completa e manutenção preventiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-20 bg-gray-200">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-blue-800 mb-6">Entre em Contato</h2>
+      <p class="text-lg mb-4">📍 Rua Verona, 27 – Lote 2372, Vila Nova Trieste, Jarinu – SP</p>
+      <p class="text-lg">📞 (11) 96434-0212 | ✉️ comercial@mabmanutencao.com.br</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-gray-300 py-6 text-center text-sm">
+    &copy; 2025 MAB Manutenções. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
