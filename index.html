@@ -58,6 +58,28 @@
       opacity: 1;
       visibility: visible;
     }
+    
+    /* Slider animation */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .slider-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .slider {
+      display: inline-block;
+      animation: slide 20s linear infinite;
+    }
+    .slider:hover {
+      animation-play-state: paused;
+    }
+    .slider img {
+      display: inline-block;
+      height: 200px;
+      margin-right: 20px;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -69,9 +91,10 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-700 flex items-center">
-        <i class="fas fa-tools mr-2"></i> MAB Manutenções
-      </h1>
+      <div class="flex items-center">
+        <img src="mab.jpg" alt="Logo MAB" class="h-12 mr-3">
+        <h1 class="text-2xl font-bold text-blue-700">MAB Manutenções</h1>
+      </div>
       <nav class="hidden md:flex space-x-6 text-blue-800">
         <a href="#inicio" class="nav-link hover:text-blue-600">Início</a>
         <a href="#sobre" class="nav-link hover:text-blue-600">Sobre</a>
@@ -102,9 +125,30 @@
       <h2 class="text-4xl md:text-5xl font-bold mb-6 fade-in">Seus equipamentos em boas mãos</h2>
       <p class="text-xl md:text-2xl mb-8 fade-in delay-1">Manutenção especializada em roçadeiras, motosserras, sopradores e motores de popa</p>
       <div class="fade-in delay-2">
-        <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center transition">
-          <i class="fas fa-phone-alt mr-2"></i> Fale Conosco
+        <a href="https://wa.me/5511964340212" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full inline-flex items-center transition">
+          <i class="fab fa-whatsapp mr-2"></i> Fale Conosco
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Slider -->
+  <section class="bg-gray-200 py-8">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="https://alisonmab.github.io/mab_img_0_1.png" alt="Roçadeira">
+        <img src="https://alisonmab.github.io/mab_img_0_2.png" alt="Motosserra">
+        <img src="https://alisonmab.github.io/mab_img_1_0.png" alt="Motor de popa">
+        <img src="https://alisonmab.github.io/mab_img_1_1.png" alt="Soprador">
+        <img src="https://alisonmab.github.io/mab_img_1_2.png" alt="Oficina">
+        <img src="https://alisonmab.github.io/mab_img_2_0.png" alt="Equipamentos">
+        <img src="https://alisonmab.github.io/mab_img_2_1.png" alt="Ferramentas">
+        <img src="https://alisonmab.github.io/mab_img_2_2.png" alt="Reparo">
+        <!-- Duplicate images for seamless looping -->
+        <img src="https://alisonmab.github.io/mab_img_0_1.png" alt="Roçadeira">
+        <img src="https://alisonmab.github.io/mab_img_0_2.png" alt="Motosserra">
+        <img src="https://alisonmab.github.io/mab_img_1_0.png" alt="Motor de popa">
+        <img src="https://alisonmab.github.io/mab_img_1_1.png" alt="Soprador">
       </div>
     </div>
   </section>
@@ -126,7 +170,10 @@
             <div class="mb-6">
               <h3 class="text-2xl font-semibold text-blue-800 mb-3">Nossa História</h3>
               <p class="text-gray-700 leading-relaxed">
-                A MAB Manutenções nasceu da nossa própria necessidade. Começamos realizando manutenções nas nossas próprias máquinas, com o cuidado e a dedicação de quem entende a importância de manter os equipamentos em perfeito funcionamento.
+                A MAB Manutenções nasceu da união de duas paixões: um pai apaixonado por jardinagem e um filho fascinado por motores, tecnologia e robótica. Juntos, começamos realizando manutenções nas nossas próprias máquinas, com o cuidado e dedicação de quem ama o que faz.
+              </p>
+              <p class="text-gray-700 leading-relaxed mt-4">
+                Com o tempo, amigos e conhecidos começaram a nos procurar, confiando em nossa experiência e qualidade no serviço. No início de 2025, decidimos transformar essa paixão em um negócio e oficializamos a MAB Manutenções.
               </p>
             </div>
             
@@ -137,15 +184,24 @@
               </p>
             </div>
             
-            <div class="flex flex-wrap gap-4">
-              <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
-                <i class="fas fa-check-circle mr-2"></i> Qualidade
-              </div>
-              <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
-                <i class="fas fa-check-circle mr-2"></i> Confiança
-              </div>
-              <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
-                <i class="fas fa-check-circle mr-2"></i> Experiência
+            <div class="mb-6">
+              <h3 class="text-2xl font-semibold text-blue-800 mb-3">Nossos Valores</h3>
+              <div class="flex flex-wrap gap-4">
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
+                  <i class="fas fa-check-circle mr-2"></i> Qualidade
+                </div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
+                  <i class="fas fa-check-circle mr-2"></i> Honestidade
+                </div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
+                  <i class="fas fa-check-circle mr-2"></i> Paixão
+                </div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
+                  <i class="fas fa-check-circle mr-2"></i> Compromisso
+                </div>
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full flex items-center">
+                  <i class="fas fa-check-circle mr-2"></i> Inovação
+                </div>
               </div>
             </div>
           </div>
@@ -243,72 +299,6 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="py-20 bg-blue-900 text-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-12 text-center fade-in">O Que Nossos Clientes Dizem</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-blue-800 p-6 rounded-xl fade-in delay-1">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center mr-4">
-              <i class="fas fa-user text-xl"></i>
-            </div>
-            <div>
-              <h4 class="font-bold">Carlos Silva</h4>
-              <div class="flex text-yellow-400">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <p class="italic">"Minha roçadeira estava com problemas há meses. Levei na MAB e em dois dias estava melhor que nova. Recomendo!"</p>
-        </div>
-        
-        <div class="bg-blue-800 p-6 rounded-xl fade-in delay-2">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center mr-4">
-              <i class="fas fa-user text-xl"></i>
-            </div>
-            <div>
-              <h4 class="font-bold">Ana Paula</h4>
-              <div class="flex text-yellow-400">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <p class="italic">"Excelente atendimento e preço justo. Meu motor de popa voltou a funcionar perfeitamente. Virei cliente fixo!"</p>
-        </div>
-        
-        <div class="bg-blue-800 p-6 rounded-xl fade-in delay-3">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center mr-4">
-              <i class="fas fa-user text-xl"></i>
-            </div>
-            <div>
-              <h4 class="font-bold">Roberto Almeida</h4>
-              <div class="flex text-yellow-400">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
-          <p class="italic">"Finalmente encontrei um lugar confiável para manutenção das minhas motosserras. Profissionais qualificados e honestos."</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section id="contato" class="py-20 bg-white">
     <div class="container mx-auto px-4">
@@ -373,7 +363,7 @@
                 <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition">
                   <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="bg-green-600 text-white p-3 rounded-full hover:bg-green-700 transition">
+                <a href="https://wa.me/5511964340212" class="bg-green-600 text-white p-3 rounded-full hover:bg-green-700 transition">
                   <i class="fab fa-whatsapp"></i>
                 </a>
               </div>
@@ -383,45 +373,18 @@
         
         <div class="lg:w-1/2 fade-in delay-2">
           <div class="bg-gray-100 p-8 rounded-xl shadow-md">
-            <h3 class="text-2xl font-semibold mb-6 text-blue-800">Envie uma Mensagem</h3>
-            
-            <form id="contactForm" class="space-y-4">
-              <div>
-                <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
-                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-              </div>
-              
-              <div>
-                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-              </div>
-              
-              <div>
-                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
-                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-              </div>
-              
-              <div>
-                <label for="equipment" class="block text-gray-700 font-medium mb-2">Tipo de Equipamento</label>
-                <select id="equipment" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                  <option value="">Selecione...</option>
-                  <option value="roçadeira">Roçadeira</option>
-                  <option value="motosserra">Motosserra</option>
-                  <option value="soprador">Soprador</option>
-                  <option value="motor_popa">Motor de Popa</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-              
-              <div>
-                <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
-                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
-              </div>
-              
-              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition flex items-center justify-center">
-                <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
-              </button>
-            </form>
+            <h3 class="text-2xl font-semibold mb-6 text-blue-800">Como chegar</h3>
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.075426745292!2d-46.65342658502228!3d-23.56573436763883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1629832798788!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                class="rounded-lg"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -433,9 +396,10 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 class="text-xl font-bold text-white mb-4 flex items-center">
-            <i class="fas fa-tools mr-2"></i> MAB Manutenções
-          </h3>
+          <div class="flex items-center mb-4">
+            <img src="mab.jpg" alt="Logo MAB" class="h-10 mr-3">
+            <h3 class="text-xl font-bold text-white">MAB Manutenções</h3>
+          </div>
           <p class="mb-4">Especialistas em manutenção de equipamentos profissionais desde 2025.</p>
           <div class="flex space-x-4">
             <a href="#" class="text-gray-400 hover:text-white transition">
@@ -444,7 +408,7 @@
             <a href="#" class="text-gray-400 hover:text-white transition">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white transition">
+            <a href="https://wa.me/5511964340212" class="text-gray-400 hover:text-white transition">
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>
@@ -597,27 +561,6 @@
     
     // Initial load
     loadGalleryImages(6);
-    
-    // Contact form submission
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form values
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const equipment = document.getElementById('equipment').value;
-      const message = document.getElementById('message').value;
-      
-      // Here you would typically send this data to a server
-      console.log('Form submitted:', { name, email, phone, equipment, message });
-      
-      // Show success message
-      alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
-      
-      // Reset form
-      this.reset();
-    });
     
     // Animate elements when they come into view
     const animateOnScroll = function() {
