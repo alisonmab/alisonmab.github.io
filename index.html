@@ -4,62 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MAB Manutenções</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans">
+  <style>
+    body {
+      background-color: #1f2937;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Cabeçalho -->
-  <header class="bg-gray-800 shadow p-6">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-blue-500">MAB Manutenções</h1>
-      <nav>
-        <ul class="flex gap-4 text-white font-medium">
-          <li><a href="#sobre" class="hover:text-blue-400">Sobre</a></li>
-          <li><a href="#estrutura" class="hover:text-blue-400">Estrutura</a></li>
-          <li><a href="#contato" class="hover:text-blue-400">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #111827;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .item {
+      background-color: #111827;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .item p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MAB Manutenções</h1>
+    <p>Confira nossos serviços abaixo:</p>
   </header>
 
-  <!-- Sobre -->
-  <section id="sobre" class="py-16 px-6 text-center bg-gray-900">
-    <h2 class="text-4xl font-bold text-blue-500 mb-6">Como Surgiu a MAB?</h2>
-    <p class="max-w-3xl mx-auto text-lg text-gray-300">
-      A MAB Manutenções nasceu da união entre conhecimento técnico e paixão por máquinas. Formada por engenheiros e técnicos especializados, nossa missão é garantir a performance ideal de seus equipamentos com qualidade, rapidez e confiança.
-    </p>
-  </section>
-
-  <!-- Galeria de Imagens -->
-  <section id="estrutura" class="bg-gray-800 py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-blue-400 text-center mb-10">Nossa Estrutura</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="img/mab_img_0_1.png" alt="MAB 1" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_0_2.png" alt="MAB 2" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_1_0.png" alt="MAB 3" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_1_1.png" alt="MAB 4" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_1_2.png" alt="MAB 5" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_2_0.png" alt="MAB 6" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_2_1.png" alt="MAB 7" class="rounded-xl shadow-lg">
-        <img src="img/mab_img_2_2.png" alt="MAB 8" class="rounded-xl shadow-lg">
-        <img src="img/mab.jpg" alt="MAB 9" class="rounded-xl shadow-lg">
-      </div>
+  <section class="galeria">
+    <div class="item">
+      <img src="mab_img_0_1.png" alt="MAB 1">
+      <p>MAB 1</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_0_2.png" alt="MAB 2">
+      <p>MAB 2</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_1_0.png" alt="MAB 3">
+      <p>MAB 3</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_1_1.png" alt="MAB 4">
+      <p>MAB 4</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_1_2.png" alt="MAB 5">
+      <p>MAB 5</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_2_0.png" alt="MAB 6">
+      <p>MAB 6</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_2_1.png" alt="MAB 7">
+      <p>MAB 7</p>
+    </div>
+    <div class="item">
+      <img src="mab_img_2_2.png" alt="MAB 8">
+      <p>MAB 8</p>
+    </div>
+    <div class="item">
+      <img src="mab.jpg" alt="MAB 9">
+      <p>MAB 9</p>
     </div>
   </section>
-
-  <!-- Contato -->
-  <section id="contato" class="bg-gray-900 py-16 px-6">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-blue-500 mb-6">Entre em Contato</h2>
-      <p class="text-gray-300 mb-4">📞 (11) 96434-0212<br>📧 comercial@mabmanutencao.com.br</p>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="bg-gray-800 py-6 text-center text-sm text-gray-400">
-    © 2025 MAB Manutenções – Todos os direitos reservados.
-  </footer>
 
 </body>
 </html>
